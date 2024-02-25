@@ -2,6 +2,9 @@ import 'phaser'
 import CountryScene from './scenes/countryScene'
 import PreloadScene from './scenes/preloadScene'
 import GameManager from "./objects/gameManager";
+import MainScene from "./scenes/mainScene";
+import ShopScene from './scenes/shopScene';
+import LoginScene from './scenes/loginScene';
 
 const DEFAULT_WIDTH = 1280
 const DEFAULT_HEIGHT = 720
@@ -16,7 +19,7 @@ const config = {
     width: DEFAULT_WIDTH,
     height: DEFAULT_HEIGHT
   },
-  scene: [PreloadScene, CountryScene],
+  scene: [LoginScene, PreloadScene, CountryScene, MainScene, ShopScene],
   physics: {
     default: 'arcade',
     arcade: {

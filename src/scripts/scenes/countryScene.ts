@@ -108,6 +108,8 @@ export default class CountryScene extends Phaser.Scene {
               gameManager.country = {x,y};
               this.country = {x, y};
               console.log(`Selected country index: ${x}, ${y}`); // For debugging
+              gameManager.ownedTerritories.push(this.country);
+              this.scene.start('MainScene')
             }
           }
         });
